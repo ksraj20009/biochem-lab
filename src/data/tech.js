@@ -1,0 +1,187 @@
+// Biotech & Chemical Technology — the engineering sections.
+export const techEntries = [
+  {
+    id: 'pcr',
+    title: 'PCR — Copying DNA',
+    section: 'tech',
+    icon: '🖨️',
+    summary: 'The photocopier of biology: heat splits DNA, primers mark the copies, a heat-proof polymerase extends them. One molecule becomes billions — 30 cycles = ~1 billion copies.',
+    formula: 'Denature 95°C → anneal 55°C → extend 72°C × 30 cycles (2³⁰ ≈ 10⁹ copies)',
+    formulaType: 'process',
+    mechanism: [
+      'Denaturation: 95°C breaks the hydrogen bonds holding the double helix together.',
+      'Annealing: short primers bind their complementary sequences at ~55°C, marking the start of each copy.',
+      'Extension: Taq polymerase (from hot-spring bacteria) reads the template and builds the complementary strand at 72°C.',
+      'Each cycle doubles the target — exponential amplification.'
+    ],
+    whereItWorks: 'Thermal cycler machines; forensic labs, hospitals, food-safety labs. COVID-19 tests were RT-PCR.',
+    problem: 'DNA samples are vanishingly small — how do you get enough to study or test?',
+    solution: 'Exploit the physics of the double helix (heat denaturation) + enzymes from thermophilic bacteria — chain reactions give exponential copies.',
+    applications: ['Forensics (DNA fingerprints)', 'Pathogen testing', 'Ancient DNA', 'Cloning and sequencing prep'],
+    safety: 'Educational overview. PCR itself is safe; its use is regulated in medical and forensic contexts.',
+    tags: ['pcr', 'dna', 'copy', 'amplify', 'polymerase', 'forensic', 'test', 'covid'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'crispr',
+    title: 'CRISPR-Cas9 — Genome Editing',
+    section: 'tech',
+    icon: '✂️',
+    summary: 'A bacterial immune system turned into a search-and-replace tool for DNA: a guide RNA finds a 20-letter address, Cas9 cuts, and the cell\'s repair machinery writes the edit.',
+    formula: 'gRNA (20 nt address) + Cas9 (nuclease) → double-strand cut → repair (knock-out or paste-in)',
+    formulaType: 'process',
+    mechanism: [
+      'Design a 20-nucleotide guide RNA matching the target gene.',
+      'The gRNA + Cas9 complex scans the genome; on a perfect match (next to a PAM motif), Cas9 cuts both strands.',
+      'Non-homologous repair glues it back, often disabling the gene (knockout).',
+      'With a repair template, the cell can paste in a corrected sequence (precise edit).'
+    ],
+    whereItWorks: 'In labs: cells, plants, animals. In clinics: Casgevy (approved 2023) edits blood stem cells to cure sickle-cell disease.',
+    problem: 'Genetic diseases are misspellings in a 3-billion-letter text — how to correct one without wrecking the rest?',
+    solution: 'Programmable molecular scissors: the address is RNA (cheap to make), the cut is enzymatic, and repair does the writing.',
+    applications: ['Sickle-cell cure', 'Agriculture (disease-resistant crops)', 'Cancer immunotherapy (CAR-T)', 'Basic research'],
+    safety: 'Off-target edits and germline editing are serious concerns; human use is strictly regulated. Educational description only.',
+    tags: ['crispr', 'gene editing', 'cas9', 'genetic engineering', 'genome', 'gmo', 'knockout', 'therapy'],
+    diagram: null,
+    model3d: 'dna'
+  },
+  {
+    id: 'fermentation',
+    title: 'Fermentation — Civilization\'s Oldest Biotech',
+    section: 'tech',
+    icon: '🍶',
+    summary: 'Microbes digesting sugars into useful products: bread, beer, yogurt, antibiotics, insulin and industrial chemicals — humanity\'s first and still largest biotechnology.',
+    formula: 'C₆H₁₂O₆ → 2 C₂H₅OH + 2 CO₂ (yeast, anaerobic) · C₆H₁₂O₆ → 2 lactic acid (yogurt)',
+    formulaType: 'chemical',
+    mechanism: [
+      'In the absence of oxygen, microbes extract energy by partial oxidation of sugar.',
+      'Yeast excretes ethanol + CO₂ (bread rises, beer ferments).',
+      'Lactic-acid bacteria acidify milk (yogurt, cheese) — a natural preservative.',
+      'Industrial strains (engineered E. coli, yeast, fungi) now make insulin, enzymes, vitamins and bioplastics.'
+    ],
+    whereItWorks: 'Your gut, sourdough starters, breweries, and million-litre industrial bioreactors.',
+    problem: 'How to make complex molecules (like insulin) cheaply and at scale?',
+    solution: 'Cells as programmable chemical factories: feed them sugar, engineer the pathway, harvest the product.',
+    applications: ['Recombinant insulin', 'Antibiotic production', 'Biofuels', 'Sustainable chemicals (lactic acid → PLA plastic)'],
+    safety: 'Fermented food science is safe. Home fermentation of food is routine; industrial biotech is regulated.',
+    tags: ['fermentation', 'yeast', 'bread', 'beer', 'yogurt', 'bioreactor', 'insulin', 'ethanol', 'lactic acid'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'enzyme-engineering',
+    title: 'Enzyme Engineering — Designing Catalysts',
+    section: 'tech',
+    icon: '⚙️',
+    summary: 'Enzymes accelerate reactions by factors of 10⁶–10²³. Engineering them (directed evolution) gives industry greener, faster catalysts — the 2018 Chemistry Nobel.',
+    formula: 'E + S → ES → E + P (catalysis; rate enhancement up to 10²³×)',
+    formulaType: 'equation',
+    mechanism: [
+      'The enzyme\'s active site stabilizes the transition state — lowering the activation-energy barrier.',
+      'Directed evolution: random-mutate the gene → screen for better variants → repeat (molecular evolution in the lab).',
+      'Engineered enzymes now make drugs, detergents and textiles at mild temperatures.',
+      'Mutations accumulate: after a few rounds, an enzyme tuned for a new substrate emerges.'
+    ],
+    whereItWorks: 'Research labs, the $5B industrial-enzyme market, your laundry detergent (proteases, amylases).',
+    problem: 'Chemical industry needs less heat, fewer solvents, more selectivity.',
+    solution: 'Evolve the catalyst instead of inventing it: mutation + selection = purpose-built enzymes at room temperature and pressure.',
+    applications: ['Detergents', 'Pharma synthesis (sitagliptin)', 'Biofuels', 'DNA sequencing enzymes'],
+    safety: 'Educational overview; industrial enzyme work is routine and regulated.',
+    tags: ['enzyme', 'catalyst', 'directed evolution', 'protein engineering', 'active site', 'transition state', 'kinetics'],
+    diagram: null,
+    model3d: 'molecule'
+  },
+  {
+    id: 'synthetic-biology',
+    title: 'Synthetic Biology — Life as Engineering',
+    section: 'tech',
+    icon: '🧰',
+    summary: 'Standardized genetic parts (promoters, genes, switches) assembled into biological circuits — cells programmed to sense, compute and produce.',
+    formula: 'Parts → devices → systems (e.g., promoter + ribosome-binding site + gene = expression device)',
+    formulaType: 'concept',
+    mechanism: [
+      'DNA synthesis makes any gene sequence to order — the "compile" step.',
+      'Standard parts (BioBricks) snap together with predictable behaviour.',
+      'Logic gates in cells: AND/OR/NOT circuits built from transcription factors.',
+      'Biosensors: engineered cells that glow or die in the presence of arsenic, toxins or tumour markers.'
+    ],
+    whereItWorks: 'iGEM student competitions, research labs, synthetic-genome projects (Mycoplasma mycoides JCVI-syn3.0).',
+    problem: 'Biology is messy and undocumented — how to make it predictable and engineerable?',
+    solution: 'Abstraction + standardization: treat DNA as code, cells as programmable substrates, and iteration as compile-test cycles.',
+    applications: ['Biosensors for pollution', 'Bio-manufactured drugs', 'Living materials', 'Minimal-genome research'],
+    safety: 'Synthetic biology is heavily regulated for safety and biosecurity; educational overview only.',
+    tags: ['synthetic biology', 'biobrick', 'genetic circuit', 'biosensor', 'engineering', 'programming life'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'bioreactors',
+    title: 'Bioreactors — Scaling Life',
+    section: 'tech',
+    icon: '🏭',
+    summary: 'From a flask to a 100,000-litre stirred tank: growing cells industrially means controlling food, oxygen, temperature and waste — chemical engineering meets biology.',
+    formula: 'Monod growth: μ = μmax·S/(Ks + S) (growth rate vs nutrient concentration)',
+    formulaType: 'equation',
+    mechanism: [
+      'Sterilize everything — one contaminant ruins a week of culture.',
+      'Control pH, temperature, dissolved O₂, and feed rate with sensors and feedback loops.',
+      'Batch, fed-batch or continuous modes trade productivity vs contamination risk.',
+      'Downstream processing (filtration, chromatography) purifies the product to spec.'
+    ],
+    whereItWorks: 'Pharma plants making antibodies and vaccines; biofuel refineries; cultivated-meat pilots.',
+    problem: 'Cells evolved for a body, not a tank — shear stress, oxygen limits, waste accumulation all cap productivity.',
+    solution: 'Instrumented vessels + metabolic modelling + media engineering = industrial-scale biology.',
+    applications: ['Monoclonal antibody production', 'Vaccine manufacturing', 'Enzymes and amino acids', 'Cultivated meat'],
+    safety: 'Educational overview.',
+    tags: ['bioreactor', 'fermenter', 'industrial', 'scale up', 'monod', 'manufacturing', 'pharma production'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'green-chemistry',
+    title: 'Green Chemistry — Clean by Design',
+    section: 'tech',
+    icon: '🌱',
+    summary: 'Twelve principles for making chemicals with less waste, less toxicity and renewable inputs. Atom economy is the core metric: how much of what you put in ends up in the product.',
+    formula: 'Atom economy = (MW of desired product / MW of all products) × 100%',
+    formulaType: 'equation',
+    mechanism: [
+      'Design reactions to minimize by-products (catalysis over stoichiometric reagents).',
+      'Use renewable feedstocks (biomass, CO₂) instead of petroleum.',
+      'Safer solvents: water, supercritical CO₂, ionic liquids.',
+      'Energy efficiency: room-temperature, ambient-pressure processes (enzymes are the gold standard).'
+    ],
+    whereItWorks: 'Modern pharma, materials and consumer-goods industries; regulatory frameworks (REACH).',
+    problem: 'The chemical industry historically produced kilograms of waste per kilogram of product.',
+    solution: 'Catalysis, biocatalysis and process redesign — the same molecule, made with a fraction of the footprint.',
+    applications: ['Ibuprofen green synthesis (waste cut 6×)', 'Bioplastics', 'CO₂-to-chemicals', 'Green pesticides'],
+    safety: 'Educational overview.',
+    tags: ['green chemistry', 'sustainability', 'atom economy', 'catalysis', 'waste', 'solvent', 'renewable'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'drug-development',
+    title: 'The Drug Development Pipeline',
+    section: 'tech',
+    icon: '💊',
+    summary: 'From 10,000 candidates to 1 approved medicine in ~12 years at ~$2.6B: target discovery → lead optimization → preclinical → 3-phase trials → approval.',
+    formula: 'Target → hit (screening) → lead (optimized) → candidate → Phase I/II/III → market',
+    formulaType: 'process',
+    mechanism: [
+      'Target: pick a disease mechanism (a receptor, enzyme or gene).',
+      'Hit discovery: screen chemical libraries (millions of compounds, robotics).',
+      'Lead optimization: medicinal chemists tune potency, selectivity, and ADME (absorption, distribution, metabolism, excretion).',
+      'Trials: Phase I safety (20–100 people), II efficacy (100s), III confirmation (1000s) — ~90% cumulative failure rate.'
+    ],
+    whereItWorks: 'Pharma and biotech labs, clinical research organizations, regulatory agencies.',
+    problem: 'Finding a molecule that hits one target in the body and nothing else, safely, for years.',
+    solution: 'Structure-based design + combinatorial screening + pharmacokinetics — chemistry aimed like an arrow at a biological target.',
+    applications: ['New medicines', 'Orphan drugs for rare diseases', 'Repurposing (new uses for old drugs)', 'Vaccine platforms'],
+    safety: 'Educational overview. All real drug development is regulated; never self-medicate based on mechanism diagrams.',
+    tags: ['drug', 'pharmaceutical', 'clinical trial', 'medicine', 'adme', 'fda', 'target', 'lead optimization'],
+    diagram: null,
+    model3d: null
+  }
+]
