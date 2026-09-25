@@ -1,0 +1,187 @@
+// Biology — all life: cells, microbes, animals, plants, genetics.
+export const biologyEntries = [
+  {
+    id: 'the-cell',
+    title: 'The Cell — Unit of Life',
+    section: 'biology',
+    icon: '🦠',
+    summary: 'Every living thing is built from cells. Prokaryotes (bacteria) keep DNA free-floating; eukaryotes (plants, animals, fungi, protists) pack it in a nucleus and run specialized organelles.',
+    formula: 'Cell ≈ membrane + cytoplasm + DNA + ribosomes',
+    formulaType: 'concept',
+    mechanism: [
+      'The phospholipid bilayer forms a selective barrier — hydrophobic tails face inward, hydrophilic heads face the water on both sides.',
+      'The nucleus stores DNA and transcribes it into mRNA.',
+      'Ribosomes translate mRNA into proteins — the machines that do nearly all the work of life.',
+      'Mitochondria (eukaryotes) burn food with oxygen to make ATP, the cell\'s energy currency.'
+    ],
+    whereItWorks: 'Every tissue of every organism — from the 30 trillion cells of a human to a single-celled yeast.',
+    problem: 'A cell must take in raw materials, keep its interior chemically different from its environment, copy its DNA, and divide — all without leaking its contents.',
+    solution: 'Membrane transport proteins, compartmentalization into organelles, and a constant ATP budget solve this. The membrane is the chemistry-biology bridge: it is a self-assembling lipid bilayer studded with protein gates.',
+    applications: ['Cancer research (uncontrolled division)', 'Antibiotic design (bacteria-specific targets)', 'Stem-cell therapy', 'Fermentation industry'],
+    safety: 'Educational concept — no handling required.',
+    tags: ['cell', 'organelle', 'membrane', 'nucleus', 'mitochondria', 'ribosome', 'life', 'prokaryote', 'eukaryote'],
+    diagram: 'cell',
+    model3d: null
+  },
+  {
+    id: 'bacteria',
+    title: 'Bacteria — The Microbial World',
+    section: 'biology',
+    icon: '🧫',
+    summary: 'Bacteria are single-celled prokaryotes that divide by binary fission, swapping genes on plasmids. They run your digestion, ferment your food, and occasionally make you sick.',
+    formula: '1 cell → 2 cells (binary fission, ~20 min in E. coli under ideal lab conditions)',
+    formulaType: 'process',
+    mechanism: [
+      'DNA replication begins at the origin; the circular chromosome is copied.',
+      'The cell elongates; plasmids (small DNA loops) also copy independently — this is how antibiotic resistance spreads.',
+      'The membrane and wall pinch inward and two daughter cells separate.',
+      'Plasmid transfer via conjugation lets bacteria acquire new genes (like resistance) from neighbours.'
+    ],
+    whereItWorks: 'Soil, water, your gut (~38 trillion bacterial cells in a typical human), skin, deep-sea vents, everywhere.',
+    problem: 'A single bacterium can become a colony of billions overnight — useful in fermentation, dangerous in infection.',
+    solution: 'Understanding the cell wall (peptidoglycan) and ribosomes (70S, different from our 80S) gives medicine selective targets: beta-lactam antibiotics block wall synthesis; aminoglycosides jam bacterial ribosomes.',
+    applications: ['Yogurt & cheese fermentation', 'Insulin production in engineered E. coli', 'Gut microbiome therapy', 'Bioremediation of oil spills'],
+    safety: 'Educational overview only. Working with pathogenic bacteria requires licensed labs.',
+    tags: ['bacteria', 'microbe', 'microorganism', 'plasmid', 'fission', 'probiotic', 'gut', 'infection', 'antibiotic resistance'],
+    diagram: 'cell',
+    model3d: null
+  },
+  {
+    id: 'viruses',
+    title: 'Viruses — Life at the Edge',
+    section: 'biology',
+    icon: '🧬',
+    summary: 'Viruses are genetic packages (DNA or RNA in a protein capsid) that can only replicate by hijacking a cell. They are chemistry pretending to be biology — and the best proof that the two fields are one continuum.',
+    formula: 'Virus + host cell + metabolism → new virions',
+    formulaType: 'process',
+    mechanism: [
+      'Surface proteins lock onto specific receptors on a host cell (like a key in a lock).',
+      'The viral genome enters; the host\'s own ribosomes start translating viral genes.',
+      'New capsid proteins and genomes self-assemble into virions.',
+      'Particles exit (budding or lysis) and infect new cells.'
+    ],
+    whereItWorks: 'Inside living cells only — every kingdom of life has its viruses.',
+    problem: 'Viruses mutate fast (especially RNA viruses) and evolve around drugs and immunity.',
+    solution: 'Vaccines train the immune system with a harmless preview of viral antigens; antivirals block key steps like entry or genome copying (e.g., polymerase inhibitors).',
+    applications: ['mRNA vaccines', 'Gene-therapy vectors (AAV)', 'Phage therapy against antibiotic-resistant bacteria', 'Molecular biology tools'],
+    safety: 'Educational overview only; culturing pathogens is restricted to containment labs.',
+    tags: ['virus', 'vaccine', 'phage', 'infection', 'capsid', 'rna', 'dna'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'photosynthesis',
+    title: 'Photosynthesis — Sunlight into Sugar',
+    section: 'biology',
+    icon: '🌿',
+    summary: 'Plants, algae and cyanobacteria convert light, water and CO₂ into glucose — the reaction that powers nearly all life on Earth and gave us our oxygen atmosphere.',
+    formula: '6 CO₂ + 6 H₂O + light → C₆H₁₂O₆ + 6 O₂',
+    formulaType: 'chemical',
+    mechanism: [
+      'Chlorophyll in photosystem II absorbs a photon and loses an electron (water is split to replace it — this releases O₂).',
+      'The electron falls down a transport chain, pumping protons and making ATP (same chemistry as your mitochondria, run backwards).',
+      'Photosystem I re-energizes the electron; NADPH is made.',
+      'The Calvin cycle spends ATP + NADPH to fix CO₂ into sugar.'
+    ],
+    whereItWorks: 'Chloroplasts in leaves, algae cells, cyanobacteria — and industrial photobioreactors.',
+    problem: 'Energy must be captured and stored in chemical bonds to be useful at night.',
+    solution: 'Two coupled photosystems split water and drive carbon fixation — a natural solar panel plus battery in one organelle.',
+    applications: ['Crops and yield research', 'Artificial photosynthesis for fuels', 'Algae biofuels', 'Understanding Earth\'s oxygen history'],
+    safety: 'Safe, foundational biology.',
+    tags: ['photosynthesis', 'plant', 'chlorophyll', 'glucose', 'oxygen', 'calvin cycle', 'light reaction'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'dna-genetics',
+    title: 'DNA & the Central Dogma',
+    section: 'biology',
+    icon: '🧬',
+    summary: 'A 4-letter chemical code (A-T, G-C base pairs) stores every organism\'s blueprint. DNA → RNA → protein: the most important "formula" in biology.',
+    formula: 'DNA --(transcription)--> mRNA --(translation)--> protein',
+    formulaType: 'concept',
+    mechanism: [
+      'The double helix unzips; RNA polymerase copies a gene into mRNA.',
+      'mRNA is spliced and exported from the nucleus.',
+      'Ribosomes read it 3 bases (a codon) at a time, matching each to an amino acid carried by tRNA.',
+      'The amino-acid chain folds into a working 3-D protein — shape is function.'
+    ],
+    whereItWorks: 'The nucleus of every eukaryotic cell; ribosomes in the cytoplasm; the entire tree of life uses the same code.',
+    problem: 'How does chemistry store heredity and turn it into living machinery?',
+    solution: 'Base-pairing (A-T, G-C) gives both faithful copying and error-correction — digital information in a molecule.',
+    applications: ['PCR and forensic DNA', 'CRISPR gene editing', 'Evolutionary trees', 'Synthetic insulin'],
+    safety: 'Foundational, safe concept.',
+    tags: ['dna', 'rna', 'gene', 'genetics', 'protein', 'codon', 'double helix', 'heredity', 'code'],
+    diagram: null,
+    model3d: 'dna'
+  },
+  {
+    id: 'hybridization',
+    title: 'Hybridization & Species Barriers (Tiger × Horse?)',
+    section: 'biology',
+    icon: '🐯',
+    summary: 'Why a tiger and a horse cannot produce a hybrid — and why a lion and a tiger (liger) or a horse and a donkey (mule) sometimes can. It comes down to chromosome counts, genetic distance and species barriers.',
+    formula: 'Cross success ∝ 1 / (genetic distance between species)',
+    formulaType: 'concept',
+    mechanism: [
+      'Fertilization requires sperm and egg chromosomes to pair correctly at cell division. Tiger: 38 chromosomes, horse: 64 — their chromosomes cannot line up, so development fails almost immediately.',
+      'Close relatives pair well: horse (64) × donkey (62) → mule (63, usually sterile); lion (38) × tiger (38) → liger.',
+      'Hybrid sterility happens when the mixed chromosome set cannot make balanced sperm/eggs (mules).',
+      'Over millions of years, separated populations accumulate mutations until their genomes no longer recognize each other — that is speciation.'
+    ],
+    whereItWorks: 'Reproductive biology across the animal and plant kingdoms. Plants hybridize far more freely than animals (wheat, for example, is a triple-hybrid).',
+    problem: 'There is no chemical "formula" that forces two incompatible genomes to merge — the barrier is the entire architecture of the genomes.',
+    solution: 'What science actually does: (1) study natural hybrids to trace evolution, (2) use controlled breeding within compatible species, (3) genetic engineering to transfer individual genes between species — how bacteria make human insulin today.',
+    applications: ['Mule breeding (3,000+ years old)', 'Hybrid crops (corn, wheat)', 'Conservation genetics of endangered species', 'GMO insulin and enzymes'],
+    safety: 'This topic is answered educationally: real hybridization science explains why crosses fail or succeed. Deliberately creating hybrid animals raises serious animal-welfare and ethics issues and is restricted by law in most countries.',
+    tags: ['hybrid', 'cross', 'breed', 'tiger', 'horse', 'liger', 'mule', 'donkey', 'species', 'chromosome', 'speciation', 'crossbreed', 'zorse', 'wholphin'],
+    diagram: null,
+    model3d: null
+  },
+  {
+    id: 'metabolism',
+    title: 'Metabolism & Cellular Respiration',
+    section: 'biology',
+    icon: '🔥',
+    summary: 'How your body extracts energy from food: the same combustion chemistry as burning wood, but in ~30 controlled enzyme steps so the energy is captured as ATP instead of heat.',
+    formula: 'C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O + ~30-32 ATP',
+    formulaType: 'chemical',
+    mechanism: [
+      'Glycolysis: glucose (6 C) splits into two pyruvate (3 C) in the cytoplasm — small ATP profit.',
+      'Pyruvate enters mitochondria and feeds the Krebs cycle, which strips electrons (as NADH/FADH₂) and releases CO₂.',
+      'The electron transport chain passes those electrons to oxygen through a series of protein complexes, pumping protons.',
+      'ATP synthase lets protons flow back through it like a turbine, spinning out ATP.'
+    ],
+    whereItWorks: 'Every cell; mitochondria are the power plants (you inherited theirs from your mother).',
+    problem: 'Cells need a steady, controlled energy currency, not a campfire.',
+    solution: 'Stepwise oxidation + a proton gradient + a molecular turbine (ATP synthase) — nature\'s battery charger.',
+    applications: ['Understanding exercise and fitness', 'Cancer metabolism research', 'Poison mechanism studies (cyanide blocks the chain)', 'Caloric science and nutrition'],
+    safety: 'Foundational, safe concept.',
+    tags: ['metabolism', 'atp', 'respiration', 'glucose', 'mitochondria', 'energy', 'calorie', 'glycolysis', 'krebs'],
+    diagram: 'cell',
+    model3d: null
+  },
+  {
+    id: 'microbiome',
+    title: 'The Microbiome — Your Second Genome',
+    section: 'biology',
+    icon: '🧫',
+    summary: '~38 trillion bacteria, fungi and archaea live on and in you — mostly in the gut. They train your immune system, make vitamins, and influence mood via the gut-brain axis.',
+    formula: 'Fibre + gut microbes → short-chain fatty acids (butyrate) + vitamins K/B12',
+    formulaType: 'process',
+    mechanism: [
+      'You cannot digest dietary fibre; your gut microbes ferment it.',
+      'Fermentation releases short-chain fatty acids (butyrate, propionate, acetate) that feed your colon cells and calm inflammation.',
+      'Microbes synthesize vitamin K and some B vitamins you cannot make.',
+      'The vagus nerve and microbial metabolites form a chemical feedback loop with the brain (gut-brain axis).'
+    ],
+    whereItWorks: 'Gut, skin, mouth, lungs — every surface of the body.',
+    problem: 'Antibiotics and low-fibre diets reduce microbial diversity, linked to allergies, obesity and IBS.',
+    solution: 'Dietary fibre variety, fermented foods, and (medically supervised) fecal microbiota transplants for C. difficile infections.',
+    applications: ['Probiotic foods', 'FMT therapy', 'Personalized nutrition', 'Mental-health research'],
+    safety: 'General education; probiotics are generally safe for healthy people but ask a doctor when immunocompromised.',
+    tags: ['microbiome', 'gut', 'probiotic', 'bacteria', 'fibre', 'butyrate', 'fermentation', 'flora'],
+    diagram: null,
+    model3d: null
+  }
+]
